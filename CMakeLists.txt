@@ -7,12 +7,12 @@ set(CMAKE_CXX_STANDARD 11)
 include(GNUInstallDirs)
 
 file(GLOB SOURCES
-    ${CMAKE_SOURCE_DIR}/src/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
     )
 
 add_library(netutils STATIC ${SOURCES})
 
-target_include_directories (netutils PUBLIC ${CMAKE_SOURCE_DIR}/include)
+target_include_directories (netutils PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set_target_properties(netutils PROPERTIES
         VERSION ${PROJECT_VERSION}
