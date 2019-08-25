@@ -24,7 +24,8 @@ public:
 
 	enum SocketOption
 	{
-		BroadcastOption
+		BroadcastOption,
+		ReuseAddressOption
 	};
 
 public:

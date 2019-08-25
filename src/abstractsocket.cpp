@@ -149,6 +149,14 @@ int AbstractSocket::setSocketOption(SocketOption option, int value)
 			return -1;
 		}
 	}
+	else if (option == ReuseAddressOption)
+	{
+		ret = ::setsockopt(_handle, SOL_SOCKET, SO_REUSEADDR, &value, sizeof(value));
+		if (ret == -1)
+		{
+			return -1;
+		}
+	}
 	else
 	{
 		errno = EINVAL;
