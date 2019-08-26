@@ -11,10 +11,10 @@ class TcpSocket : public AbstractSocket
 {
 
 public:
-    TcpSocket(NetworkAddress::Family family);
-    ~TcpSocket() override;
+	TcpSocket(NetworkAddress::Family family);
+	~TcpSocket() override;
 
-    int listen(int backlog);
+	int listen(int backlog);
 
 	int accept(TcpSocket &socket, NetworkAddress &address);
 

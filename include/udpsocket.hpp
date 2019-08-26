@@ -28,15 +28,15 @@ public:
 	 * @param address
 	 * @return
 	 */
-    int sendTo(const void *buf, size_t &len, const NetworkAddress &address);
+	int sendTo(const void *buf, size_t &len, const NetworkAddress &address);
 
-    /*!
-     *
-     * @param buf
-     * @param len
-     * @param address
-     * @return
-     */
+	/*!
+	 *
+	 * @param buf
+	 * @param len
+	 * @param address
+	 * @return
+	 */
 	int recvFrom(void *buf, size_t &len, NetworkAddress &address);
 
 };
